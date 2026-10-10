@@ -1,0 +1,430 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+
+    <head>
+        <meta charset="utf-8">
+        <title>Christiana Mavroyiakoumou</title>
+        <link rel="shortcut icon" href="favicon.ico" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <!-- Le styles -->
+        <link href="twitter-bootstrap/v2/assets/css/bootstrap.css" rel="stylesheet">
+        <style type="text/css">
+            body {
+                padding-top: 60px;
+                padding-bottom: 40px;
+            }
+            .hero-unit{
+                background-color:#D2DDDA;
+            }
+        </style>
+        <style type="text/css">
+            table.myTable { border-collapse:collapse; padding:2%; width:98%;}
+            table.myTable td, table.myTable th { border:1px solid black;padding:5px; }
+            body.myBody {background-color:#FFF}
+        </style>
+        <link href="twitter-bootstrap/v2/assets/css/bootstrap-responsive.css" rel="stylesheet">
+
+        <link rel="shortcut icon" href="./Images/logo_clear_final.png">
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="twitter-bootstrap/v2/assets/ico/apple-touch-icon-144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="twitter-bootstrap/v2/assets/ico/apple-touch-icon-114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="twitter-bootstrap/v2/assets/ico/apple-touch-icon-72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="twitter-bootstrap/v2/assets/ico/apple-touch-icon-57-precomposed.png">
+        <!---->
+
+        <style type="text/css">
+            h2 {
+                margin-bottom: 0.5em;
+            }
+            p, ol, ul {
+                margin-top: 0;
+                margin-bottom: 0.5em;
+            }
+            tbody > tr > th {
+                text-align: left;
+            }
+            #abstractTable td:not(.speaker):not(.theAbstract) {
+                white-space: nowrap;
+            }
+            tr[id^="abstract"] {
+                display: none;
+            }
+            .lecturelist {
+                list-style-type: none;
+                counter-reset: elementcounter;
+                padding-left: 1em;
+            }
+            .lecturelist > li ul {
+                list-style: outside;
+                padding-left: 1em;
+                margin-bottom: 0em;
+            }
+            .lecturelist > li:before {
+                content: "Lecture " counter(elementcounter) ": ";
+                counter-increment: elementcounter;
+            }
+            .lecturelist > li > ul {
+                list-style-type: none;
+                padding-left: 2em;
+                text-indent: -0.75em;
+            }
+            .lecturelist > li > ul > li:before {
+                content: "â€“ ";
+            }
+            .lecturelist > li > ul > li > ul {
+                list-style-type: disc;
+                text-indent: 0;
+            }
+            .lecturelist > li > ul > li > ul > li > ul {
+                list-style-type: circle;
+                text-indent: 0;
+            }
+            #abstractTable {
+                text-align: left;
+                width: 100%;
+                border-spacing: 0;
+                border-collapse: collapse;
+            }
+            #abstractTable th,
+            #abstractTable > tbody > tr > td:not(.theAbstract):not(:last-child) {
+                padding: 4pt 2pt 4pt 2pt;
+            }
+            #abstractTable > tbody > tr > th {
+                padding-left: 4pt;
+            }
+            #headerRow > th {
+                border: solid black;
+                border-width: 1pt 1pt 1pt 1pt;
+                text-align: center;
+                padding-left: 4pt;
+                padding-right: 4pt;
+            }
+            #abstractTable > tbody:nth-child(even) {
+                background-color: #e2e2e2;
+            }
+            #abstractTable > tbody:nth-child(odd) {
+                background-color: #ffffff;
+            }
+            #abstractTable > tbody > tr > th:first-child {
+                border: solid black;
+                border-width: 0 0 0 1pt;
+            }
+            #abstractTable > tbody > tr > td:last-child:not(.theAbstract) {
+                border: solid black;
+                border-width: 0 1pt 0 0;
+                vertical-align: middle;
+                padding: 3pt 0 0 0;
+            }
+            #abstractTable > tbody:last-child > tr:last-child > th,
+            #abstractTable > tbody:last-child > tr:last-child > td:not(.theAbstract) {
+                border: solid black;
+                border-width: 0 0 1pt 0;
+            }
+            #abstractTable > tbody:last-child > tr:last-child > th:first-child {
+                border: solid black;
+                border-width: 0 0 1pt 1pt;
+            }
+            #abstractTable > tbody:last-child > tr:last-child > td:last-child:not(.theAbstract) {
+                border: solid black;
+                border-width: 0 1pt 1pt 0;
+            }
+            .theAbstract {
+                padding: 0 4pt 0 4pt;
+                border: solid black;
+                border-width: 0 1pt 0 1pt;
+            }
+            #abstractTable > tbody:last-child > tr:last-child > td[class="theAbstract"] {
+                border: solid black;
+                border-width: 0 1pt 1pt 1pt;
+            }
+            .corresTable {
+                width: 100%;
+                margin-top: 0.5em;
+                margin-bottom: 0.5em;
+            }
+            .corresTable tr td:first-child {
+                width: 49%;
+                text-align: right;
+            }
+            .corresTable tr td:nth-child(even) {
+                width: 2%;
+                white-space: nowrap;
+                text-align: center;
+            }
+            .corresTable tr td:last-child {
+                width: 49%;
+                text-align: left;
+            }
+            .lectureTable {
+                padding-left: 1em;
+                margin-top: 0.5em;
+                margin-bottom: 0.5em;
+            }
+            .lectureTable tr td {
+                vertical-align: top;
+            }
+            #lastHeadRow th, #lastHeadRow td {
+                border-bottom: 1pt solid black;
+            }
+            #abstractTable > tbody:last-child > #lastHeadRow > th:first-child {
+                border: solid black;
+                border-width: 0 0 1pt 1pt;
+            }
+            #abstractTable > tbody:last-child > #lastHeadRow > td:last-child:not(.theAbstract) {
+                border: solid black;
+                border-width: 0 1pt 1pt 0;
+            }
+        </style>
+    </head>
+
+
+
+
+    <body >
+
+        <!-- Pull down menus top right -->
+
+        <div class="container" >
+            <div class="navbar  navbar-fixed-top">
+                <div class="navbar-inner">
+                    <div class="container" >
+                        <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="brand" href="index.html"><strong>Christiana Mavroyiakoumou</strong> </a>
+                        <div class="nav-collapse collapse">
+                            <ul class="nav pull-right">
+
+                                <li><a href="./index.html">Home</a></li>
+                                <li ><a href="research.html">Research</a></li>
+                                <li ><a href="talks.html">Talks</a></li>
+                                <li ><a href="teaching.html">Teaching</a></li>
+                                <li class="active"><a href="other.html">Other</a></li>
+
+
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+        <!-- Text Body -->
+
+
+        <div class="container" style="padding-top:1px">
+
+            <div class="span12 tab-content">
+                <div id="about" class="tab-pane active">
+                    <h3>Minicourses, Fall 2024</h3>
+                    <hr/>
+                    New York University
+
+                    <p>
+                        <br>
+                    </p>
+                    <ul>
+                        <p> The minicourse series is a chance for young researchers (graduate students and postdocs) to teach each other interesting math in an informal setting.</p>
+
+                        <p> Each course will last 1 week, ~1 hour each day, in the afternoon, in <b>Room 905</b>.</p>
+
+                        <p>The line-up can be found below. All times are in EST. </p>
+
+                        <p>If you are giving one of the minicourses and you would like to include notes, slides, or any other information, please send them to me and I will add them!</p>
+                    </ul>
+
+                    <br>
+
+
+
+
+
+                    <table id="abstractTable">
+                        <thead>
+                            <tr id="headerRow">
+                                <th id="topicHeader">Topic</th>
+                                <th>Speaker</th>
+                                <th>Dates</th>
+                                <th>Time</th>
+                                <th>Abstract</th>
+                                <th id="notesHeader">Notes</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <th>
+                                    Adaptive spectral methods for forward- and backward-type problems in partial integro-differential equations
+                                </th>
+                                <td class="speaker">
+                                    <a href="https://sites.google.com/nyu.edu/mingtao-xia/home">Mingtao Xia</a>
+                                </td>
+                                <td>Sep 23-27</td>
+                                <td>4-4:30pm</td>
+
+                                <td style="text-align: center;"><button id="toggleAbstract5">Show</button></td>
+                                <!--                                <td style="text-align: center;"><a href="KimHodgeTheoryMinicourse.pdf"> <img src="minicourses2022_files/Adobe_PDF_file_icon_24x24.png" alt="PDF"> </a></td>-->
+                                <td>  </td>
+                            </tr>
+                            <tr id="abstract5" class="abstract">
+                                <td class="theAbstract" colspan="8">
+                                    <p><u>Abstract.</u> In these mini-courses, I will provide 3-4 short lectures on how to apply an adaptive spectral method to tackle both forward-type problems to numerically solving spatiotemporal partial integral differential equations and to tackle inverse-type problems of reconstructing spatiotemporal equations,  especially those with a spatial variable defined in unbounded domains.<br>
+
+                                    Specifically, how traditional spectral methods can be integrated into the design of parameterized neural networks will be explored. The prerequisite of this course will be numerical analysis, numerical PDEs (preferably spectral methods), and neural network models.
+                                    </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                        
+                        <tbody>
+                            <tr>
+                                <th>
+                                    High-order accurate finite-difference methods for PDEs
+                                </th>
+                                <td class="speaker">
+                                    <a href="https://www.simonsfoundation.org/people/nour-al-hassanieh/">Nour Al Hassanieh</a>
+                                </td>
+                                <td>Oct 21-25</td>
+                                <td>4-5pm</td>
+                                <td style="text-align: center;"><button id="toggleAbstract1">Show</button></td>
+                                <td style="text-align: center;"><!--<a href="minicourses2022_files/mini-LLC.pdf"> <img src="minicourses2022_files/Adobe_PDF_file_icon_24x24.png" alt="PDF"> </a>--></td>
+                                <td>  </td>
+                            </tr>
+                            <tr id="abstract1" class="abstract">
+                                <td class="theAbstract" colspan="8">
+                                    <p><u>Abstract.</u> High-order accurate finite-difference (FD) methods allow for versatile numerical solutions to various partial differential equation (PDE) problems in science and engineering. However, boundary closures, efficiency, and algebraic complexity limit the usage of such methods. In this mini-course, we provide practical tools to improve the order of accuracy of FD PDE schemes without losing efficiency, simplicity, and scalability. Our model problem will be a scalar wave equation initial-boundary-value problem on complicated geometry. Using the model problem, we introduce Local Compatibility Boundary Conditions (LCBC) to support high-order accurate boundary treatment. We also discuss the FActored Modified Equation (FAME) scheme, a hierarchical algorithm to solve wave equation problems on complex geometry to arbitrary accuracy with high efficiency. Both methods utilize computational ideas that can help accelerate the design and testing of automated high-order accurate FD methods for PDEs.
+                                    </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                        
+                         <tbody>
+                            <tr>
+                                <th>
+                                    Randomized linear algebra
+                                </th>
+                                <td class="speaker">
+                                    <a href="https://chen.pw/">Tyler Chen</a>
+                                </td>
+                                <td>Nov 4-8</td>
+                                <!-- <td>(M–F)</td> -->
+                                <td>5:30-6:30pm</td>
+                                <td style="text-align: center;"><button id="toggleAbstract2">Show</button></td>
+                                <td style="text-align: center;"><!--<a href="minicourses2022_files/mini-LLC.pdf"> <img src="minicourses2022_files/Adobe_PDF_file_icon_24x24.png" alt="PDF"> </a>--></td>
+                                <td>  </td>
+                            </tr>
+                            <tr id="abstract2" class="abstract">
+                                <td class="theAbstract" colspan="8">
+                                    <p><u>Abstract.</u> Randomization has proven to be an effective tool for accelerating a number of linear-algebra tasks, both in terms of asymptotic complexity and real-world runtime. In this mincourse we survey some of the key algorithms and analysis techniques commonly used in randomized linear algebra.
+                                    </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                        
+                      
+                        
+                         <tbody>
+                            <tr>
+                                <th>
+                                    Sampling and large deviation theory-based estimation of rare events for stochastic differential equations
+                                </th>
+                                <td class="speaker">
+                                    <a href="https://cims.nyu.edu/~ts4843/index.html">Timo Schorlepp </a>
+                                </td>
+                                <td>Dec 2-6</td>
+                                <!-- <td>(M–F)</td> -->
+                                <td>5:30-6:30pm</td>
+                                <td style="text-align: center;"><button id="toggleAbstract4">Show</button></td>
+<!--                                <td style="text-align: center;"><a href="minicourses2022_files/mini-LLC.pdf"> <img src="minicourses2022_files/Adobe_PDF_file_icon_24x24.png" alt="PDF"> </a></td>-->
+                                <td>  </td>
+                            </tr>
+                            <tr id="abstract4" class="abstract">
+                                <td class="theAbstract" colspan="8">
+                                    <p><u>Abstract.</u> In this minicourse, I will give a quick and informal introduction to a number of numerical techniques for rare event probability estimation in stochastic differential equations (SDEs), an important problem in many scientific disciplines. First, I will provide an overview of importance sampling and splitting methods for SDEs. Afterwards, I will describe sampling-free computational methods for asymptotic rare event estimates based on large deviation theory (LDT). Both leading-order LDT asymptotics as well as recent progress on pre-exponential refinements will be addressed. Prerequisites for the minicourse would be a basic familiarity with SDEs and optimization/control, but I will try to briefly introduce all necessary concepts.
+                                    </p>
+                                </td>
+                            </tr>
+                        </tbody>
+
+
+                           <tbody>
+                            <tr>
+                                <th>
+                                    Fast algorithms
+                                </th>
+                                <td class="speaker">
+                                    <a href="https://www.whzhu.com/">Hai Zhu</a>
+                                </td>
+                                <td>TBA (Spring 2025)</td>
+                                <!-- <td>(M–F)</td> -->
+                                <td>4-5pm</td>
+                                <td style="text-align: center;"><button id="toggleAbstract3">Show</button></td>
+                                <td style="text-align: center;"><!--<a href="minicourses2022_files/mini-LLC.pdf"> <img src="minicourses2022_files/Adobe_PDF_file_icon_24x24.png" alt="PDF"> </a>--></td>
+                                <td>  </td>
+                            </tr>
+                            <tr id="abstract3" class="abstract">
+                                <td class="theAbstract" colspan="8">
+                                    <p><u>Abstract.</u> TBA.
+                                    </p>
+                                </td>
+                            </tr>
+                               
+                            <tr style="border-bottom: 1px solid black;">
+                            </tr>
+                        </tbody>
+
+
+
+                    </table>
+
+                </div>
+            </div>
+        </div>
+        <!-- Le javascript
+================================================== -->
+        <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if necessary
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="./twitter-bootstrap/js/jquery-1.7.2.min.js"></script>')</script>-->
+        <script src="twitter-bootstrap/js/jquery-1.7.2.min.js"></script>
+        <!-- Bootstrap jQuery plugins compiled and minified -->
+        <script src="twitter-bootstrap/v2assets/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $("#hideAbstracts").on("click", function(event) {
+                    event.preventDefault();
+                    $('.abstract').hide();
+                    $("[id^=toggleAbstract]").text("Show");
+                    $('#lastHeadRow').children().css("border-bottom","1pt solid black");
+                });
+                $("#showAbstracts").on("click", function(event) {
+                    event.preventDefault();
+                    $('.abstract').show();
+                    $("[id^=toggleAbstract]").text("Hide");
+                    $('#lastHeadRow').children().css("border-bottom","0");
+                });
+                $("[id^=toggleAbstract]").click(function() {
+                    $('#abstract'+$(this).attr("id").slice(14)).toggle();
+                    $('#abstract'+$(this).attr("id").slice(14)).is(":visible")?$(this).text("Hide"):$(this).text("Show");
+                    if ($(this).attr("id").slice(14) == 19) {
+                        $('#abstract'+$(this).attr("id").slice(14)).is(":visible")?$('#lastHeadRow').children().css("border-bottom","0"):$('#lastHeadRow').children().css("border-bottom","1pt solid black");
+                    }
+                });
+            });
+        </script>
+
+
+    </body>
+    <!-- InstanceEnd --></html>

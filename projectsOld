@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+<link href="styles.css">
+<style>
+
+.sidenav {
+    position: absolute;
+    height: 1120px;
+    width: 130px;
+    z-index: 1;
+    top: 20px;
+    left: 10px;
+    background: #f1f1f1;
+    overflow: hidden;
+    padding: 8px 0;
+}
+
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    font-family:  "Lucida Sans Unicode","Lucida Grande",sans-serif;
+    /* "Verdana", "Arial", "Helvetica", sans-serif; */
+    color: black;
+    display: block;
+}
+
+.sidenav a:hover {
+    background-color: #e5e5e5;
+    border: 3px solid #00274c;
+}
+
+.sidenav a.active {
+  background-color: #ccc;
+  border: 3px solid #ffcb05;
+}
+
+.main {
+    margin-left: 140px; /* Same width as the sidebar + left position in px */
+    font-size: 15px; /* Increased text to enable scrolling */
+    padding: 0px 10px;
+    font-family:  "Lucida Sans Unicode","Lucida Grande",sans-serif;
+
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+</style>
+
+<title>Projects - Christiana Mavroyiakoumou</title>
+<link rel="shortcut icon" href="favicon.ico" />
+
+</head>
+
+
+<body style="background-color:	rgb(270, 270, 270);width:1250px;">
+<body link="#0d57aa">
+<style type="text/css">
+     a {
+        text-decoration:none;
+     }
+</style>
+
+<div class="sidenav">
+    <center><img src="logo.png" alt="logo" style="width:100px;"></center><br>
+    <a href="index.html">Home</a>
+    <a class="active" href="projects.html">Projects</a>
+    <a href="talks.html">Talks</a>
+    <a href="teaching.html">Teaching</a>
+    <a href="other.html">Other</a>
+</div>
+
+<div class="main">
+<h2>Christiana Mavroyiakoumou</h2>
+
+<hr class="style13"></hr>
+
+<h3>Publications</h3>
+[1] The QRD and SVD of matrices over a real algebra [<a href = "https://www.sciencedirect.com/science/article/pii/S0024379516300386">Journal</a>]  [<a href = "https://arxiv.org/abs/1512.02121">arXiv</a>]<br>
+<dd>P. Ginzberg, C. Mavroyiakoumou<br>
+Linear Algebra and its Applications, 504, 27 (2016)</dd>
+
+
+<h3>Projects</h3>
+  This is a collection of projects I have worked on during my education either as a research project or as part of a class, that have not been published.
+  <dl>
+    <dt><i><font size="3.5">Mathematical Modelling of Microstructured Optical Fibres</font></i></dt>
+      <dd>Thesis for the MSc in Mathematical Modelling and Scientific Computing (Trinity Term and Summer 2017)<br>
+        Supervisors: Dr. Ian Griffiths and Prof. Peter Howell<br><br>
+    <dt><i><font size="3.5">Solving Non-linear Elasticity BVPs in FEniCS: Bifurcations and Buckling of Beams</font></i> [<a href="FEniCS.pdf">PDF</a>]
+       <dd> Course: Python in Scientific Computing (Trinity Term 2017) <br>
+        Supervisor: Prof. Patrick Farrell </dt><br><br>
+    <dt><i><font size="3.5">Stokes Flow and Free Boundaries</font></i> [<a href="stokes.pdf">PDF</a>]
+      <dd> Course: Applied Complex Variables (Hilary Term 2017)<br>
+         Supervisor: Prof. Peter Howell  </dt><br><br>
+    <dt><i><font size="3.5">Modelling Soil Erosion and Bed Formation in Shallow Overland Flow</font></i> [<a href="soil.pdf">PDF</a>]
+      <dd> Case Study for Mathematical Modelling (Hilary Term 2017)<br>
+        Supervisor: Prof. Graham Sander </dt><br><br>
+    <dt><i><font size="3.5">Numerical Linear Algebra: Comparison of Several Numerical Methods used to solve Poisson's Equation</font></i> [<a href="nla.pdf">PDF</a>]
+      <!-- <a href="backslash.png"><img class="thumb" src="backslash.png" width="20%" style="float:right" /></a> -->
+      <dd>Case Study for Scientific Computing (Hilary Term 2017) <br>
+        Supervisor: Dr. Kathryn Gillow </dt><br><br>
+    <dt><i><font size="3.5">Sliding Glaciers and Cavitation</font></i> [<a href="glaciers.pdf">PDF</a>]
+      <dd>Course: Mathematical Geoscience (Michaelmas Term 2016) <br>
+        Supervisor: Prof. Ian Hewitt </dt><br><br>
+    <dt><i><font size="3.5">Dynamics of Interacting Vortices - the restricted three vortex problem and leapfrogging of vortex pairs</font></i>
+      <dd>  UROP research project (Summer 2015)<br>
+       Supervisor: Dr. Frank Berkshire </dt><br><br>
+    <dt><i><font size="3.5">A Network of Mathematical Theorems</font></i> [<a href="networks.pdf">PDF</a>]
+      <dd>Second year group project  (June 2015)<br>
+        Supervisor: Dr. Nick Jones </dt><br><br>
+  </dl>
+<br><br>
+</body>
+</html>
